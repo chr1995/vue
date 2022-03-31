@@ -49,6 +49,16 @@ export default createStore({
         // 侧边栏折叠
         handleCollapse(state, data) {
             state.collapse = data;
+        },
+        // 更换标题颜色
+        toChangeColor(){
+            var color = document.documentElement.style.getPropertyValue("--theme_bg_color");
+            if(color == "#242f42" || !color){
+                document.documentElement.style.setProperty("--theme_bg_color","#6495ED");
+            }else{
+                document.documentElement.style.setProperty("--theme_bg_color","#242f42");
+            }
+            
         }
     },
     actions: {},

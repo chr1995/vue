@@ -77,12 +77,18 @@ export default {
             }
         };
 
+        //切换主题
+        const changeColor = () => {
+            store.commit("toChangeColor")
+        }
+
         return {
             username,
             message,
             collapse,
             collapseChage,
             handleCommand,
+            changeColor
         };
     },
 };
@@ -95,6 +101,7 @@ export default {
     height: 70px;
     font-size: 22px;
     color: #fff;
+    background-color: var(--theme_bg_color);
 }
 .collapse-btn {
     float: left;
